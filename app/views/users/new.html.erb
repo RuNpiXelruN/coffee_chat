@@ -10,6 +10,18 @@
   <% end %>
 
   <div>
+      <%= form.label :username %>
+      <%= form.text_field :username, require: true %>
+  </div>
+  <div>
+      <%= form.label :first_name %>
+      <%= form.text_field :first_name, require: true %>
+  </div>
+  <div>
+      <%= form.label :last_name %>
+      <%= form.text_field :last_name, require: true %>
+  </div>
+  <div>
     <%= form.label :email %>
     <%= form.email_field :email, require: true %>
   </div>
