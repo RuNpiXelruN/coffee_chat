@@ -9,8 +9,14 @@
   </head>
 
   <body>
+    <% if notice %>
+      <p><%= notice %></p>
+    <% end %>
+
     <%= link_to "Home", dashboard_index_path %>
     <% if signed_in? %>
+      <%= link_to "All Users", users_path %>
+      <%= link_to "My Profile", user_path(current_user) %>
       <%= link_to "Sign Out", session_path, method: :delete %>
     <% else %>
       <%= link_to "Sign Up", new_user_path %>

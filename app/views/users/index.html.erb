@@ -1,0 +1,10 @@
+<h1>Your fellow Users</h1>
+
+<% @users.each do |user| %>
+  <h3><%= user.username %></h3>
+  <div>
+    <p><%= user.first_name %></p>
+    <p><%= user.last_name %></p>
+  </div>
+  <%= link_to "View User", user_path(user) %>
+<% end %>

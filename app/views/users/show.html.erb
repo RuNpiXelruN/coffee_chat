@@ -1,0 +1,11 @@
+<h1>Profile of <%= @user.username %></h1>
+<div>
+  <p><%= @user.first_name %> <%= @user.last_name %></p>
+  <p><%= @user.email %></p>
+</div>
+
+<% if @user = current_user %>
+  <%= link_to "Edit", edit_user_path(@user) %>
+<% end %>
+<%= link_to "My Dashboard", dashboard_index_path %>
+<%= link_to "All Users", users_path %>
